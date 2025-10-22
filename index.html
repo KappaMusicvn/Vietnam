@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <link rel="stylesheet" href="/App.css" />
+    <link rel="stylesheet" href="./App.css" />
     <script type="importmap">
 {
   "imports": {
@@ -21,10 +21,13 @@
   }
 }
 </script>
+    <!-- FIX: Added Babel Standalone for in-browser JSX/TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- FIX: Changed script type to "text/babel" for Babel to process it, and made src path relative -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
 </body>
 </html>
